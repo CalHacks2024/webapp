@@ -1,6 +1,9 @@
 import React, { useState } from "react";
+import Header from "../components/Header";
 import TextInput from "../components/TextInput";
 import Textbox from "../components/Textbox";
+import "./Report.css";
+import Button from "../components/Button";
 
 const Report = () => {
   const [name, setName] = useState("");
@@ -13,13 +16,23 @@ const Report = () => {
 
   return (
     <div>
-      <TextInput value={name} setValue={setName} placeholder="Enter a name"/>
-      <TextInput value={age} setValue={setAge} placeholder="Enter an age"/>
-      <Textbox value={complaint} setValue={setComplaint} placeholder="Enter chief complaint..."/>
-      <Textbox value={illness} setValue={setIllness} placeholder="Enter present illness history..."/>
-      <Textbox value={family} setValue={setFamily} placeholder="Enter family history..."/>
-      <Textbox value={history} setValue={setHistory} placeholder="Enter social history..."/>
-      <Textbox value={symptoms} setValue={setSymptoms} placeholder="Enter review of symptoms..."/>
+      <Header name="Alvin Kam - Oct 18, 2pm"/>
+      <div className="report-container">
+        <div className="report-form background-grey">
+          <div className="report-textinputs">
+            <TextInput value={name} setValue={setName} label="Name"/>
+            <TextInput value={age} setValue={setAge} label="Age"/>
+          </div>
+          <div className="report-textboxes">
+            <Textbox value={complaint} setValue={setComplaint} label="Chief complaint"/>
+            <Textbox value={illness} setValue={setIllness} label="History of present illness"/>
+            <Textbox value={family} setValue={setFamily} label="Family history"/>
+            <Textbox value={history} setValue={setHistory} label="Social history"/>
+            <Textbox value={symptoms} setValue={setSymptoms} label="Review of symptoms"/>
+          </div>
+          <Button label="&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;" onClick={() => {}}/>
+        </div>
+      </div>
     </div>
   )
 };

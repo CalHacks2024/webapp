@@ -1,3 +1,7 @@
 .textbox {
-  
+  border: none;
+  width: 100%;
+  resize: vertical;
+  font-size: 16px;
+  min-height: 96px;
 }

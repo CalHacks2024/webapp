@@ -1,3 +1,14 @@
 .button {
+  width: fit-content;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 20px;
 
+  &:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+  }
 }
+

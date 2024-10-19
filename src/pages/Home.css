@@ -1,0 +1,31 @@
+.home-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 20%;
+  height: 100%;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.description {
+  font-size: 24px;
+}
+
+.doctor-input {
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  font-size: 20px;
+
+  &::placeholder {
+    color: #7B7B7B;
+    text-align: center;
+  }
+}
+

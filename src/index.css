@@ -1,13 +1,67 @@
+#root {
+  min-height: 100vh;
+}
+
 body {
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  background-color: #EFEFE7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  font-family: "Montserrat"
+}
+
+.aoboshi {
+  font-family: "Aoboshi One"
+}
+
+.background-olive {
+  background-color: #686A54;
+}
+
+.text-olive {
+  color: #686A54;
+}
+
+.background-white {
+  background-color: #EFEFE7;
+}
+
+.text-white {
+  color: #EFEFE7;
+}
+
+.background-lightgrey {
+  background-color: #DFD7CA;
+}
+
+.text-lightgrey {
+  color: #DFD7CA;
+}
+
+.background-grey {
+  background-color: #DCD8C5;
+}
+
+.text-grey {
+  color: #DCD8C5;
+}
+
+.background-darkgrey {
+  background-color: #7B7B7B;
+}
+
+.text-darkgrey {
+  color: #7B7B7B;
+}
+
+.background-brown {
+  background-color: #BDAC8E;
+}
+
+.text-brown {
+  color: #BDAC8E;
 }
