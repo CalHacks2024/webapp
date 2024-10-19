@@ -1,7 +1,6 @@
 import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
 
 const PDFReport = ({ report }) => {
-  console.log(report);
   const styles = StyleSheet.create({
     page: {
       flexDirection: "column",

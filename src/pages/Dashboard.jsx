@@ -12,21 +12,6 @@ import "./Dashboard.css";
 import { getReports, deleteReport } from "../utils/api";
 import PDFReport from "../utils/report";
 
-const dummyData = [
-  {
-    name: "Alan Wang",
-    date: "Oct 15"
-  },
-  {
-    name: "Adi Poluri",
-    date: "Oct 16",
-  },
-  {
-    name: "Byron Wang",
-    date: "Oct 17",
-  },
-]
-
 const Dashboard = ({ setCurrentReport }) => {
   const [reportData, setReportData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -61,7 +46,7 @@ const Dashboard = ({ setCurrentReport }) => {
       <div className="dashboard-container">
         <div className="dashboard-description text-darkblue">Manage your reports here.</div> 
         <div className="loader">
-          <FadeLoader loading={loading} color="#686A54" />
+          <FadeLoader loading={loading} />
         </div>
         <ul className="reports">
           {reportData.map((report) => (
