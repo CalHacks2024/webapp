@@ -1,12 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
+import { pdf } from "@react-pdf/renderer";
+import { FadeLoader } from "react-spinners";
 import Header from "../components/Header";
 import Button from "../components/Button";
 import IconButton from "../components/IconButton";
 import Delete from "../assets/delete.svg";
 import Download from "../assets/download.svg";
+import { saveAs } from "file-saver";
 import "./Dashboard.css";
 import { getReports } from "../utils/api";
+import PDFReport from "../utils/report";
 
 const dummyData = [
   {
@@ -23,14 +27,27 @@ const dummyData = [
   },
 ]
 
-const Dashboard = () => {
+const Dashboard = ({ setCurrentReport }) => {
   const [reportData, setReportData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   const { doctorId } = useParams();
+  const navigate = useNavigate();
 
   const getReportData = async () => {
     const data = await getReports(doctorId);
     setReportData(data?.reports);
+    setLoading(false);
+  };
+
+  const viewReport = (report) => {
+    setCurrentReport(report);
+    navigate("/report");
+  }
+
+  const saveReport = async (report) => {
+    const blob = await pdf(<PDFReport report={report} />).toBlob();
+    saveAs(blob, 'generated.pdf');
   };
 
   useEffect(() => {
@@ -42,19 +59,22 @@ const Dashboard = () => {
       <Header name="Dashboard"/>
       <div className="dashboard-container">
         <div className="dashboard-description text-olive aoboshi">Manage your reports here.</div> 
+        <div className="loader">
+          <FadeLoader loading={loading} color="#686A54" />
+        </div>
         <ul className="reports">
-          {dummyData.map((report) => (
+          {reportData.map((report) => (
             <li className="report background-grey text-olive aoboshi">
               <div className="report-name">
-                {report.name}
+                {report.data.name}
               </div> 
               <div className="report-date">
                 {report.date}
               </div>
               <div className="report-options">
-                <Button label="View Report" onClick={() => {}}/>
+                <Button label="View Report" onClick={() => { viewReport(report) }}/>
                 <IconButton icon={Delete} onClick={() => {}}/>
-                <IconButton icon={Download} onClick={() => {}}/>
+                <IconButton icon={Download} onClick={() => { saveReport(report) }}/>  
               </div>
             </li>
           ))}

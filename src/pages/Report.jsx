@@ -1,22 +1,42 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import Header from "../components/Header";
 import TextInput from "../components/TextInput";
 import Textbox from "../components/Textbox";
-import "./Report.css";
 import Button from "../components/Button";
+import { updateReport } from "../utils/api";
+import "./Report.css";
 
-const Report = () => {
-  const [name, setName] = useState("");
-  const [age, setAge] = useState("");
-  const [complaint, setComplaint] = useState("");
-  const [illness, setIllness] = useState("");
-  const [family, setFamily] = useState("");
-  const [history, setHistory] = useState("");
-  const [symptoms, setSymptoms] = useState("");
+const Report = ({ report }) => {
+  const [name, setName] = useState(report?.data.name);
+  const [age, setAge] = useState(report?.data.age);
+  const [complaint, setComplaint] = useState(report?.data.chief_complaint);
+  const [illness, setIllness] = useState(report?.data.history_of_present_illness);
+  const [family, setFamily] = useState(report?.data.family_history);
+  const [social, setSocial] = useState(report?.data.social_history);
+  const [symptoms, setSymptoms] = useState(report?.data.review_of_symptoms);
+
+  const navigate = useNavigate();
+
+  const saveReport = async () => {
+    await updateReport({
+      ...report,
+      data: {
+        name,
+        age,
+        chief_complaint: complaint,
+        history_of_present_illness: illness,
+        family_history: family,
+        social_history: social,
+        review_of_symptoms: symptoms
+      }
+    });
+    navigate(-1);
+  };
 
   return (
     <div>
-      <Header name="Alvin Kam - Oct 18, 2pm"/>
+      <Header name={`${report.data.name} - ${report.date}`}/>
       <div className="report-container">
         <div className="report-form background-grey">
           <div className="report-textinputs">
@@ -27,10 +47,13 @@ const Report = () => {
             <Textbox value={complaint} setValue={setComplaint} label="Chief complaint"/>
             <Textbox value={illness} setValue={setIllness} label="History of present illness"/>
             <Textbox value={family} setValue={setFamily} label="Family history"/>
-            <Textbox value={history} setValue={setHistory} label="Social history"/>
+            <Textbox value={social} setValue={setSocial} label="Social history"/>
             <Textbox value={symptoms} setValue={setSymptoms} label="Review of symptoms"/>
           </div>
-          <Button label="&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;" onClick={() => {}}/>
+          <Button 
+            label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+            onClick={() => { saveReport() }}
+          />
         </div>
       </div>
     </div>

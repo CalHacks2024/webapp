@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 20%;
+  gap: 35%;
   height: 100%;
 }
 
@@ -19,9 +19,10 @@
 
 .doctor-input {
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
   padding: 16px;
   font-size: 20px;
+  width: 100%;
 
   &::placeholder {
     color: #7B7B7B;

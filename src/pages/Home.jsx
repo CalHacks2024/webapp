@@ -16,8 +16,8 @@ const Home = () => {
     <div className="home-container">
       <section className="left">
         <div>
-          Logo here
-          <div className="description text-olive">the description goes here.</div>
+          SpectaCare
+          <div className="description text-olive">AR assistance for doctors, one snap at a time.</div>
         </div>
         <input className="doctor-input background-lightgrey text-darkgrey" type="text" placeholder="doctor code here" value={doctorCode} onChange={(e) => setDoctorCode(e.target.value)} />
         <Button label="continue &rarr;" onClick={() => navigateToDashboard()} />
