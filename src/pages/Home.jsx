@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Button from "../components/Button";
+import GlassesGif from "../assets/snap-spectacles.gif";
 
 const Home = () => {
   const [doctorCode, setDoctorCode] = useState("");
@@ -23,7 +24,7 @@ const Home = () => {
         <Button label="continue &rarr;" onClick={() => navigateToDashboard()} />
       </section>
       <div>
-        mascot?
+        <img style={{ width: '70%' }} src={GlassesGif} alt="Glasses" />
       </div>
     </div>
   )
