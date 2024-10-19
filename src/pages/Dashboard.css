@@ -1,5 +1,5 @@
 .dashboard-container {
-  padding: 32px 36px;
+  padding: 32px 10%;
 }
 
 .dashboard-description {
@@ -26,14 +26,14 @@
 .report {
   display: flex;
   align-items: center;
-  padding: 12px 24px;
+  padding: 12px 2.5%;
   border-radius: 8px;
   font-size: 28px;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .report-name {
-  width: 32.5%;
+  width: 25%;
 }
 
 .report-date {
@@ -43,5 +43,6 @@
 .report-options {
   display: flex;
   flex-direction: row;
-  gap: 32px;
+  height: 75%;
+  gap: 16px;
 }

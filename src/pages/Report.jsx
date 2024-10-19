@@ -38,7 +38,7 @@ const Report = ({ report }) => {
     <div>
       <Header name={`${report.data.name} - ${report.date}`}/>
       <div className="report-container">
-        <div className="report-form background-grey">
+        <div className="report-form background-lightblue">
           <div className="report-textinputs">
             <TextInput value={name} setValue={setName} label="Name"/>
             <TextInput value={age} setValue={setAge} label="Age"/>

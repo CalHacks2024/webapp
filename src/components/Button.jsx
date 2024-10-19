@@ -4,7 +4,7 @@ import "./Button.css";
 const Button = ({ label, onClick }) => {
   return (
     <button
-      className="button background-olive text-white"
+      className="button background-darkblue text-white"
       onClick={onClick}
     >
       {label}

@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  gap: 35%;
+  gap: 15%;
   height: 100%;
 }
 
@@ -13,7 +13,13 @@
   gap: 24px;
 }
 
+.title {
+  font-size: 50px;
+  margin-bottom: 24px;
+}
+
 .description {
+  display: flex;
   font-size: 24px;
 }
 
@@ -22,10 +28,10 @@
   border-radius: 4px;
   padding: 16px;
   font-size: 20px;
-  width: 100%;
+  color: #5053B3;
 
   &::placeholder {
-    color: #7B7B7B;
+    color: #5053B3;
     text-align: center;
   }
 }

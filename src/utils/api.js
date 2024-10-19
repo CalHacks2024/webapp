@@ -33,7 +33,8 @@ const updateReport = async (report) => {
     const response = await fetch(`${process.env.REACT_APP_API_URL}/updateAppointment`, {
       method: "post",
       headers: {
-        "ngrok-skip-browser-warning": true
+        "ngrok-skip-browser-warning": true,
+        "Content-Type": "application/json",
       },
       body: JSON.stringify(report)
     });

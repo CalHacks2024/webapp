@@ -3,11 +3,12 @@
   flex-direction: row;
   align-items: center;
   justify-content: left;
-  height: 12.5vh;
+  height: 10vh;
   gap: 24px;
-  padding: 8px 36px;
+  padding: 8px 10%;
 }
 
 .name {
-  font-size: 64px;
+  font-size: 40px;
+  margin-left: 2.5%;
 }

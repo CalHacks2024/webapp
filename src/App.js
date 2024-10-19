@@ -3,7 +3,7 @@ import Router from './components/Router';
 
 function App() {
   return (
-    <div className="app">
+    <div className="app background-white">
       <Router />
     </div>
   );

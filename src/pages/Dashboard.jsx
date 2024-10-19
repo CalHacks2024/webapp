@@ -58,13 +58,13 @@ const Dashboard = ({ setCurrentReport }) => {
     <div>
       <Header name="Dashboard"/>
       <div className="dashboard-container">
-        <div className="dashboard-description text-olive aoboshi">Manage your reports here.</div> 
+        <div className="dashboard-description text-darkblue">Manage your reports here.</div> 
         <div className="loader">
           <FadeLoader loading={loading} color="#686A54" />
         </div>
         <ul className="reports">
           {reportData.map((report) => (
-            <li className="report background-grey text-olive aoboshi">
+            <li className="report background-lightblue text-darkblue">
               <div className="report-name">
                 {report.data.name}
               </div> 

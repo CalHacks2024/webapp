@@ -11,57 +11,45 @@ body {
 }
 
 * {
-  font-family: "Montserrat";
-}
-
-.aoboshi {
   font-family: "Aoboshi One";
 }
 
-.background-olive {
-  background-color: #686A54;
+.background-blue {
+  background-color: #0D38B5;
 }
 
-.text-olive {
-  color: #686A54;
+.text-blue {
+  color: #0D38B5;
 }
 
 .background-white {
-  background-color: #EFEFE7;
+  background-color: #F6F8FF;
 }
 
 .text-white {
-  color: #EFEFE7;
+  color: #F6F8FF;
 }
 
-.background-lightgrey {
-  background-color: #DFD7CA;
+.background-darkblue {
+  background-color: #0D0E34;
 }
 
-.text-lightgrey {
-  color: #DFD7CA;
+.text-darkblue {
+  color: #0D0E34;
 }
 
-.background-grey {
-  background-color: #DCD8C5;
+.background-lightblue {
+  background-color: #C5D3FF;
 }
 
-.text-grey {
-  color: #DCD8C5;
+.text-lightblue {
+  color: #C5D3FF;
 }
 
-.background-darkgrey {
-  background-color: #7B7B7B;
+.background-aqua {
+  background-color: #83C3E3;
 }
 
-.text-darkgrey {
-  color: #7B7B7B;
-}
-
-.background-brown {
-  background-color: #BDAC8E;
-}
-
-.text-brown {
-  color: #BDAC8E;
+.text-aqua {
+  color: #83C3E3;
 }

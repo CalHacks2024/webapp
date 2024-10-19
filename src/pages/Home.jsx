@@ -16,10 +16,10 @@ const Home = () => {
     <div className="home-container">
       <section className="left">
         <div>
-          SpectaCare
-          <div className="description text-olive">AR assistance for doctors, one snap at a time.</div>
+          <div className="title text-darkblue">SpectaCare</div>
+          <div className="description text-darkblue">AR assistance for doctors, one <div className="text-aqua">&nbsp;snap&nbsp;</div> at a time.</div>
         </div>
-        <input className="doctor-input background-lightgrey text-darkgrey" type="text" placeholder="doctor code here" value={doctorCode} onChange={(e) => setDoctorCode(e.target.value)} />
+        <input className="doctor-input background-lightblue" type="text" placeholder="doctor code here" value={doctorCode} onChange={(e) => setDoctorCode(e.target.value)} />
         <Button label="continue &rarr;" onClick={() => navigateToDashboard()} />
       </section>
       <div>
