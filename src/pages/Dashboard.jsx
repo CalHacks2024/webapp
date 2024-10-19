@@ -33,7 +33,7 @@ const Dashboard = ({ setCurrentReport }) => {
 
   const saveReport = async (report) => {
     const blob = await pdf(<PDFReport report={report} />).toBlob();
-    saveAs(blob, 'generated.pdf');
+    saveAs(blob, `${report.data.name} - ${report.date}.pdf`);
   };
 
   useEffect(() => {
