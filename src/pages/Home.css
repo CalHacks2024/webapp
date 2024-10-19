@@ -9,6 +9,7 @@
 .left {
   display: flex;
   flex-direction: column;
+  margin-right: 40vw;
   gap: 24px;
 }
 
@@ -35,3 +36,7 @@
   }
 }
 
+.logo {
+  position: absolute;
+  margin-left: 40vw;
+}

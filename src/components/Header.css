@@ -8,6 +8,12 @@
   padding: 8px 10%;
 }
 
+.glasses {
+  &:hover {
+    cursor: pointer;
+  }
+}
+
 .name {
   font-size: 40px;
   margin-left: 2.5%;

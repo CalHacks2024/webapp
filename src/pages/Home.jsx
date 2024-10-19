@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Home.css";
 import Button from "../components/Button";
+import Blob from "../assets/blob.svg";
 import GlassesGif from "../assets/snap-spectacles.gif";
 
 const Home = () => {
@@ -23,7 +24,8 @@ const Home = () => {
         <input className="doctor-input background-lightblue" type="text" placeholder="doctor code here" value={doctorCode} onChange={(e) => setDoctorCode(e.target.value)} />
         <Button label="continue &rarr;" onClick={() => navigateToDashboard()} />
       </section>
-      <img style={{ width: '50%' }} src={GlassesGif} alt="Glasses" />
+      <img className="logo" src={Blob} alt="blob" />
+      <img className="logo" style={{ width: '50%' }} src={GlassesGif} alt="Glasses" />
     </div>
   )
 };
