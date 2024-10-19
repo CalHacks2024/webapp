@@ -16,11 +16,10 @@ const deleteReport = async (appointmentId) => {
     const response = await fetch(`${process.env.REACT_APP_API_URL}/deleteAppointment`, {
       method: "delete",
       headers: {
-        "ngrok-skip-browser-warning": true
+        "ngrok-skip-browser-warning": true,
+        "Content-Type": "application/json",
       },
-      body: {
-        appointment_id: appointmentId,
-      }
+      body: JSON.stringify({ appointment_id: appointmentId })
     });
     return await response.json();
   } catch (error) {

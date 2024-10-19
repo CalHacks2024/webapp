@@ -9,7 +9,7 @@ import Delete from "../assets/delete.svg";
 import Download from "../assets/download.svg";
 import { saveAs } from "file-saver";
 import "./Dashboard.css";
-import { getReports } from "../utils/api";
+import { getReports, deleteReport } from "../utils/api";
 import PDFReport from "../utils/report";
 
 const dummyData = [
@@ -35,6 +35,7 @@ const Dashboard = ({ setCurrentReport }) => {
   const navigate = useNavigate();
 
   const getReportData = async () => {
+    setLoading(true);
     const data = await getReports(doctorId);
     setReportData(data?.reports);
     setLoading(false);
@@ -73,7 +74,10 @@ const Dashboard = ({ setCurrentReport }) => {
               </div>
               <div className="report-options">
                 <Button label="View Report" onClick={() => { viewReport(report) }}/>
-                <IconButton icon={Delete} onClick={() => {}}/>
+                <IconButton icon={Delete} onClick={async () => { 
+                  await deleteReport(report.appointment_id);
+                  await getReportData();
+                }}/>
                 <IconButton icon={Download} onClick={() => { saveReport(report) }}/>  
               </div>
             </li>
