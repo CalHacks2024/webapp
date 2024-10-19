@@ -23,9 +23,7 @@ const Home = () => {
         <input className="doctor-input background-lightblue" type="text" placeholder="doctor code here" value={doctorCode} onChange={(e) => setDoctorCode(e.target.value)} />
         <Button label="continue &rarr;" onClick={() => navigateToDashboard()} />
       </section>
-      <div>
-        <img style={{ width: '70%' }} src={GlassesGif} alt="Glasses" />
-      </div>
+      <img style={{ width: '50%' }} src={GlassesGif} alt="Glasses" />
     </div>
   )
 };
