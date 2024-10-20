@@ -50,10 +50,17 @@ const Report = ({ report }) => {
             <Textbox value={social} setValue={setSocial} label="Social history"/>
             <Textbox value={symptoms} setValue={setSymptoms} label="Review of symptoms"/>
           </div>
-          <Button 
-            label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
-            onClick={() => { saveReport() }}
-          />
+          <div className="report-buttons">
+            <Button 
+              label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Cancel&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+              onClick={() => { navigate(-1) }}
+              type="secondary"
+            />
+            <Button 
+              label="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Save&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"
+              onClick={() => { saveReport() }}
+            />
+          </div>
         </div>
       </div>
     </div>

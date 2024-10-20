@@ -3,7 +3,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 100vh;
 }
 
 .left {
@@ -29,10 +29,15 @@
   padding: 16px;
   font-size: 20px;
   color: #5053B3;
+  transition: all 0.1s ease;
 
   &::placeholder {
     color: #5053B3;
     text-align: center;
+  }
+
+  &:hover, &:focus {
+    transform: scale(1.05);
   }
 }
 

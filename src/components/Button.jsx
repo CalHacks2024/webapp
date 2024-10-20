@@ -1,10 +1,10 @@
 import React from "react";
 import "./Button.css";
 
-const Button = ({ label, onClick }) => {
+const Button = ({ label, onClick, type }) => {
   return (
     <button
-      className="button background-darkblue text-white"
+      className={`button ${ type === 'secondary' ? "background-white text-darkblue" : "background-darkblue text-white"}`}
       onClick={onClick}
     >
       {label}

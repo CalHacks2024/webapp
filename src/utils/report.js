@@ -1,4 +1,5 @@
-import { Page, Text, View, Document, StyleSheet } from "@react-pdf/renderer";
+import { Page, Text, View, Image, Document, StyleSheet } from "@react-pdf/renderer";
+import Glasses from "../assets/glasses-dark.png";
 
 const PDFReport = ({ report }) => {
   const styles = StyleSheet.create({
@@ -11,12 +12,15 @@ const PDFReport = ({ report }) => {
       fontWeight: "700",
       fontSize: "32px",
     },
+    image: {
+      width: "12.5%"
+    },
     subheading: {
       fontWeight: "600",
-      fontSize: "24px",
+      fontSize: "18px",
     },
     text: {
-      fontSize: "16px",
+      fontSize: "12px",
       color: "grey",
     },
     smallSection: {
@@ -43,6 +47,7 @@ const PDFReport = ({ report }) => {
       <Page size="A4" style={styles.page}>
         <View style={styles.smallSection}>
           <Text style={styles.title}>{`${report.data.name} - ${report.date}`}</Text>
+          <Image style={styles.image} src={Glasses} />
         </View>
         <View style={styles.smallSection}>
           <Text style={styles.subheading}>Age</Text>
