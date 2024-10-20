@@ -72,7 +72,7 @@ const Dashboard = ({ setCurrentReport }) => {
             {reportData.map((report) => (
               <li className="report background-lightblue text-darkblue" key={report.appointment_id}>
                 <div className="report-name">
-                  {report.data.name}
+                  {report.data.name || "New Report"}
                 </div> 
                 <div className="report-date">
                   {report.date}
