@@ -36,7 +36,7 @@ const Report = ({ report }) => {
 
   return (
     <div>
-      <Header name={`${report.data.name} - ${report.date}`}/>
+      <Header name={`${report.data.name || "New Report"} - ${report.date}`}/>
       <div className="report-container">
         <div className="report-form background-lightblue">
           <div className="report-textinputs">
